@@ -1,0 +1,21 @@
+@model AC
+
+<h2>Create New AC</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(model => model.Brand)
+        @Html.TextBoxFor(model => model.Brand, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Type)
+        @Html.TextBoxFor(model => model.Type, new { @class = "form-control" })
+    </div> <!-- add a closing tag for the div element -->
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Price)
+        @Html.TextBoxFor(model => model.Price, new { @class = "form-control" })
+    </div>
+    <input type="submit" value="Create" class="btn btn-primary" />
+}

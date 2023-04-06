@@ -1,0 +1,28 @@
+@model List<AC>
+
+<h2>AC List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>AC ID</th>
+            <th>AC Brand</th>
+            <th>Type</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ac in Model)
+        {
+            <tr>
+                <td>@ac.AC_Id</td>
+                <td>@ac.Brand</td>
+                <td>@ac.Type</td>
+                <td>@ac.Price</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create")" class="btn btn-primary">Create New AC</a>
